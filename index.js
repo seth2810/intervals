@@ -17,7 +17,7 @@ export default (numbers = []) => {
     if (!Number.isInteger(val)) {
       throw IsNotIntegerArray;
     }
-    
+
     if (idx === 0) {
       start = val;
       end = val;
