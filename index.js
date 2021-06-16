@@ -6,10 +6,6 @@ export default (numbers = []) => {
     throw IsNotArrayError;
   }
 
-  if (!numbers.every(Number.isInteger)) {
-    throw IsNotIntegerArray;
-  }
-
   if (numbers.length === 0) {
     return '';
   }
@@ -18,6 +14,10 @@ export default (numbers = []) => {
   const intervals = [];
 
   numbers.forEach((val, idx) => {
+    if (!Number.isInteger(val)) {
+      throw IsNotIntegerArray;
+    }
+    
     if (idx === 0) {
       start = val;
       end = val;
