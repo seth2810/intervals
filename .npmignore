@@ -1,0 +1,8 @@
+/coverage/
+/__tests__/
+/.github/
+Makefile
+README.md
+cc-reporter
+.eslintignore
+.eslintrc.yaml

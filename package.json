@@ -1,0 +1,39 @@
+{
+  "name": "@seth2810/intervals",
+  "version": "0.0.2",
+  "description": "numbers intervals pack",
+  "main": "index.js",
+  "author": "Roman Gafurov",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seth2810/intervals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seth2810/backend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/seth2810/backend-project-lvl2#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/seth2810"
+  },
+  "scripts": {
+    "test": "jest --bail --passWithNoTests"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
