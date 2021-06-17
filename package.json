@@ -1,6 +1,6 @@
 {
   "name": "@seth2810/intervals",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "numbers intervals pack",
   "main": "index.js",
   "author": "Roman Gafurov",
