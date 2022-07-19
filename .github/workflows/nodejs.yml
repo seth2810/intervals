@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [12, 13, 14, 15]
+        node: [14, 16, 18]
 
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +26,6 @@ jobs:
         run: make install
         env:
           CI: true
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Run linter
         run: make lint
       - name: Test & publish code coverage
@@ -36,7 +35,6 @@ jobs:
         # Add Code Climate secret key
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           coverageCommand: make test-coverage
           debug: true
@@ -46,7 +44,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [12]
+        node: [14]
 
     needs: build
 
@@ -59,4 +57,4 @@ jobs:
       - name: Publish
         run: make publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
