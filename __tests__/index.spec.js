@@ -15,8 +15,8 @@ const cases = [
   [[1, 3, 5, 7, 9, 11], '1,3,5,7,9,11'],
 ];
 
-describe('stringifyIntervals', () => {
-  test.each(cases)('test %s', (numbers, expected) => {
+describe('intervals', () => {
+  test.each(cases)('%p', (numbers, expected) => {
     expect(fn(numbers)).toEqual(expected);
   });
 

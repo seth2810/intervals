@@ -1,4 +1,5 @@
 export const IsNotArrayError = new Error('Numbers is not an array');
+
 export const IsNotIntegerArray = new Error('Array must contains only integer numbers');
 
 export default (numbers = []) => {
@@ -10,7 +11,8 @@ export default (numbers = []) => {
     return '';
   }
 
-  let start, end;
+  let start;
+  let end;
   const intervals = [];
 
   numbers.forEach((val, idx) => {
